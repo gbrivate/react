@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
 import axios from 'axios';
+import {Hello} from "./Hello";
 
 const CardList = props => (
     <div> {props.profiles.map(profile =>
@@ -90,6 +91,9 @@ const App = props => {
             <div className="header">{props.title}</div>
             <Form onSubmit={addNewProfile} cleanList={cleanList}/>
             <CardList profiles={profiles}/>
+            <div>
+                <Hello/>
+            </div>
         </div>
     );
 }
